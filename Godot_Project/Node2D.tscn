@@ -8,8 +8,9 @@
 script = ExtResource( 1 )
 
 [node name="Background" type="TextureRect" parent="."]
+margin_top = -1.0
 margin_right = 1024.0
-margin_bottom = 600.0
+margin_bottom = 599.0
 texture = ExtResource( 2 )
 expand = true
 __meta__ = {
@@ -40,5 +41,14 @@ __meta__ = {
 stream = ExtResource( 3 )
 volume_db = -25.0
 autoplay = true
+
+[node name="ItemList" type="ItemList" parent="."]
+margin_left = 774.0
+margin_top = 137.0
+margin_right = 1014.0
+margin_bottom = 375.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="button_down" from="Button" to="." method="_on_Button_button_down"]
 [connection signal="button_up" from="Button" to="." method="_on_Button_button_up"]
