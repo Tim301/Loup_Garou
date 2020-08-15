@@ -27,10 +27,10 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="."]
-margin_left = 302.0
-margin_top = 289.0
-margin_right = 764.0
-margin_bottom = 357.0
+margin_left = 298.432
+margin_top = 283.054
+margin_right = 760.432
+margin_bottom = 351.054
 align = 1
 valign = 1
 __meta__ = {
@@ -51,6 +51,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Horloge" type="Timer" parent="."]
+process_mode = 0
+wait_time = 60.0
+one_shot = true
+
 [node name="Timer" type="Timer" parent="."]
+process_mode = 0
+autostart = true
 [connection signal="button_down" from="Bouton" to="." method="_on_Button_button_down"]
 [connection signal="button_up" from="Bouton" to="." method="_on_Button_button_up"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
