@@ -10,18 +10,24 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Node",
+"class": "Horloge",
+"language": "GDScript",
+"path": "res://horloge.gd"
+}, {
+"base": "Node",
 "class": "Role",
 "language": "GDScript",
 "path": "res://role.gd"
 } ]
 _global_script_class_icons={
+"Horloge": "",
 "Role": ""
 }
 
 [application]
 
 config/name="Loupgarou"
-run/main_scene="res://Node2D.tscn"
+run/main_scene="res://Partie.tscn"
 config/icon="res://icon.png"
 
 [audio]
