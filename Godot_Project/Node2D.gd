@@ -3,6 +3,7 @@ extends Node2D
 var test = load("test.gd").new()
 
 func _ready():
+	print(test.type)
 	test.Hello()
 	
 func _on_Button_button_down():
