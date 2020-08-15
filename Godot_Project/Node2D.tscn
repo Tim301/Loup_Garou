@@ -37,7 +37,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Player_Background" type="AudioStreamPlayer" parent="."]
+[node name="Musique" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
 volume_db = -25.0
 autoplay = true
