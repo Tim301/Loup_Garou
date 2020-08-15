@@ -17,7 +17,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button" type="Button" parent="."]
+[node name="Bouton" type="Button" parent="."]
 margin_left = 351.45
 margin_top = 357.595
 margin_right = 714.45
@@ -50,5 +50,5 @@ margin_bottom = 375.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="button_down" from="Button" to="." method="_on_Button_button_down"]
-[connection signal="button_up" from="Button" to="." method="_on_Button_button_up"]
+[connection signal="button_down" from="Bouton" to="." method="_on_Button_button_down"]
+[connection signal="button_up" from="Bouton" to="." method="_on_Button_button_up"]
