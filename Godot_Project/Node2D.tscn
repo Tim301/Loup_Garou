@@ -42,7 +42,7 @@ stream = ExtResource( 3 )
 volume_db = -25.0
 autoplay = true
 
-[node name="ItemList" type="ItemList" parent="."]
+[node name="Liste des joueurs" type="ItemList" parent="."]
 margin_left = 774.0
 margin_top = 137.0
 margin_right = 1014.0
