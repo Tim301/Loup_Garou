@@ -10,11 +10,17 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Node",
+"class": "Horloge",
+"language": "GDScript",
+"path": "res://horloge.gd"
+}, {
+"base": "Node",
 "class": "test",
 "language": "GDScript",
 "path": "res://test.gd"
 } ]
 _global_script_class_icons={
+"Horloge": "",
 "test": ""
 }
 
