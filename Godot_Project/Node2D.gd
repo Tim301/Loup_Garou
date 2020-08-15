@@ -1,8 +1,10 @@
 extends Node2D
 
-func _ready():
-	pass # Replace with function body.
+var test = load("test.gd").new()
 
+func _ready():
+	test.Hello()
+	
 func _on_Button_button_down():
 	get_node("Label").text = "Hello"
 
