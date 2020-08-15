@@ -1,14 +1,20 @@
 extends Node2D
 
-var test = load("test.gd").new()
+
+var voyante = load("role.gd").new()
+var villageois = load("role.gd").new()
+var loupGarou = load("role.gd").new()
 
 func _ready():
-	print(test.type)
-	test.Hello()
-	
+	voyante.edit_illustration("res://Images de test/Voyante.png")
+	villageois.edit_illustration("res://Images de test/Villageois.png")
+	loupGarou.edit_illustration("res://Images de test/Loup_garou.png")
+	#pass
+
 func _on_Button_button_down():
-	get_node("Label").text = "Hello"
+	get_node("Bouton").set_button_icon(villageois.get_texture())
 
 
 func _on_Button_button_up():
-	get_node("Label").text = ""
+	get_node("Bouton").set_button_icon(loupGarou.get_texture())
+	#get_node("Bouton").set_button_icon(InputDefault)

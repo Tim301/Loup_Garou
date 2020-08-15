@@ -10,12 +10,12 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Node",
-"class": "test",
+"class": "Role",
 "language": "GDScript",
-"path": "res://test.gd"
+"path": "res://role.gd"
 } ]
 _global_script_class_icons={
-"test": ""
+"Role": ""
 }
 
 [application]
