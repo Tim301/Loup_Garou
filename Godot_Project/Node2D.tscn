@@ -50,5 +50,7 @@ margin_bottom = 375.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Timer" type="Timer" parent="."]
 [connection signal="button_down" from="Bouton" to="." method="_on_Button_button_down"]
 [connection signal="button_up" from="Bouton" to="." method="_on_Button_button_up"]
