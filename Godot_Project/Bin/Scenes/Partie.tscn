@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Bin/Scriptes/Node2D.gd" type="Script" id=1]
 [ext_resource path="res://Bin/Images/Background+maquette.jpg" type="Texture" id=2]
-[ext_resource path="res://Hidden Fear.ogg" type="AudioStream" id=3]
+[ext_resource path="res://Bin/Musiques/Hidden Fear.ogg" type="AudioStream" id=3]
 [ext_resource path="res://Bin/Scenes/ChatBox.tscn" type="PackedScene" id=4]
 
 [node name="Partie" type="Node2D"]
@@ -21,9 +21,9 @@ __meta__ = {
 
 [node name="Bouton" type="Button" parent="."]
 margin_left = 322.266
-margin_top = 424.943
+margin_top = 484.433
 margin_right = 685.266
-margin_bottom = 502.943
+margin_bottom = 562.433
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -77,10 +77,10 @@ position = Vector2( 510, 300 )
 current = true
 
 [node name="ChatBox" parent="." instance=ExtResource( 4 )]
-margin_left = 243.999
-margin_top = -55.2455
-margin_right = 710.999
-margin_bottom = 398.754
+margin_left = 301.245
+margin_top = 5.36741
+margin_right = 768.245
+margin_bottom = 459.367
 [connection signal="button_down" from="Bouton" to="." method="_on_Button_button_down"]
 [connection signal="button_up" from="Bouton" to="." method="_on_Button_button_up"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
