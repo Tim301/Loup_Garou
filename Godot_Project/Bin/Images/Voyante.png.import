@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Loup_garou.png-83b5c0fada62a0c5d3c905c43932daa2.stex"
+path="res://.import/Voyante.png-00d26261445889166d145f3c3514a606.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images de test/Loup_garou.png"
-dest_files=[ "res://.import/Loup_garou.png-83b5c0fada62a0c5d3c905c43932daa2.stex" ]
+source_file="res://Bin/Images/Voyante.png"
+dest_files=[ "res://.import/Voyante.png-00d26261445889166d145f3c3514a606.stex" ]
 
 [params]
 

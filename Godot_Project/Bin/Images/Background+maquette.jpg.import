@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Villageois.png-ba5965a901ebbe2326367c5ec2b7981c.stex"
+path="res://.import/Background+maquette.jpg-de78ea5e657341f2fb9aded6ebb0c51e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images de test/Villageois.png"
-dest_files=[ "res://.import/Villageois.png-ba5965a901ebbe2326367c5ec2b7981c.stex" ]
+source_file="res://Bin/Images/Background+maquette.jpg"
+dest_files=[ "res://.import/Background+maquette.jpg-de78ea5e657341f2fb9aded6ebb0c51e.stex" ]
 
 [params]
 

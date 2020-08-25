@@ -12,12 +12,12 @@ _global_script_classes=[ {
 "base": "Node",
 "class": "Horloge",
 "language": "GDScript",
-"path": "res://horloge.gd"
+"path": "res://Bin/Scriptes/horloge.gd"
 }, {
 "base": "Node",
 "class": "Role",
 "language": "GDScript",
-"path": "res://role.gd"
+"path": "res://Bin/Scriptes/role.gd"
 } ]
 _global_script_class_icons={
 "Horloge": "",
@@ -27,7 +27,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Loupgarou"
-run/main_scene="res://Partie.tscn"
+run/main_scene="res://Bin/Scenes/Partie.tscn"
 config/icon="res://icon.png"
 
 [audio]

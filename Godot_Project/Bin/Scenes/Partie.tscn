@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Node2D.gd" type="Script" id=1]
-[ext_resource path="res://Background+maquette.jpg" type="Texture" id=2]
+[ext_resource path="res://Bin/Scriptes/Node2D.gd" type="Script" id=1]
+[ext_resource path="res://Bin/Images/Background+maquette.jpg" type="Texture" id=2]
 [ext_resource path="res://Hidden Fear.ogg" type="AudioStream" id=3]
-[ext_resource path="res://ChatBox.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Bin/Scenes/ChatBox.tscn" type="PackedScene" id=4]
 
 [node name="Partie" type="Node2D"]
 script = ExtResource( 1 )
@@ -19,13 +19,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ChatBox" parent="." instance=ExtResource( 4 )]
-
 [node name="Bouton" type="Button" parent="."]
-margin_left = 353.775
-margin_top = 522.287
-margin_right = 703.775
-margin_bottom = 584.287
+margin_left = 322.266
+margin_top = 424.943
+margin_right = 685.266
+margin_bottom = 502.943
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -45,13 +43,12 @@ __meta__ = {
 stream = ExtResource( 3 )
 volume_db = -25.0
 autoplay = true
-stream_paused = true
 
 [node name="Liste des joueurs" type="ItemList" parent="."]
-margin_left = 774.0
-margin_top = 137.0
-margin_right = 1014.0
-margin_bottom = 375.0
+margin_left = 772.0
+margin_top = 7.0
+margin_right = 1017.0
+margin_bottom = 376.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -80,6 +77,10 @@ position = Vector2( 510, 300 )
 current = true
 
 [node name="ChatBox" parent="." instance=ExtResource( 4 )]
+margin_left = 243.999
+margin_top = -55.2455
+margin_right = 710.999
+margin_bottom = 398.754
 [connection signal="button_down" from="Bouton" to="." method="_on_Button_button_down"]
 [connection signal="button_up" from="Bouton" to="." method="_on_Button_button_up"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

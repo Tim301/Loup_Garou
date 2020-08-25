@@ -1,15 +1,15 @@
 extends Node2D
 
 
-var voyante = load("role.gd").new()
-var villageois = load("role.gd").new()
-var loupGarou = load("role.gd").new()
-var horloge = load("horloge.gd").new()
+var voyante = load("res://Bin/Scriptes/role.gd").new()
+var villageois = load("res://Bin/Scriptes/role.gd").new()
+var loupGarou = load("res://Bin/Scriptes/role.gd").new()
+var horloge = load("res://Bin/Scriptes/horloge.gd").new()
 
 func _ready():
-	voyante.edit_illustration("res://Images de test/Voyante.png")
-	villageois.edit_illustration("res://Images de test/Villageois.png")
-	loupGarou.edit_illustration("res://Images de test/Loup_garou.png")
+	voyante.edit_illustration("res://Bin/Images/Voyante.png")
+	villageois.edit_illustration("res://Bin/Images/Villageois.png")
+	loupGarou.edit_illustration("res://Bin/Images/Loup_garou.png")
 	horloge.set_day_length(3)
 	get_node("Timer2").set_wait_time(60)
 	get_node("Timer2").start()

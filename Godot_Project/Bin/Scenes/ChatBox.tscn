@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://ChatBox.gd" type="Script" id=1]
+[ext_resource path="res://Bin/Scriptes/ChatBox.gd" type="Script" id=1]
 
 [node name="ChatBox" type="Control"]
 margin_left = 300.0
@@ -48,6 +48,7 @@ size_flags_vertical = 3
 placeholder_text = "Appuie sur TAB pour changer de channel"
 
 [node name="FondChat" type="ColorRect" parent="."]
+modulate = Color( 1, 1, 1, 0.901961 )
 show_behind_parent = true
 anchor_right = 1.0
 anchor_bottom = 1.0

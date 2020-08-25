@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Hidden Fear.ogg-d0db48269d9fc2ea60a5b1e57fc77453.oggstr"
+
+[deps]
+
+source_file="res://Bin/Musiques/Hidden Fear.ogg"
+dest_files=[ "res://.import/Hidden Fear.ogg-d0db48269d9fc2ea60a5b1e57fc77453.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

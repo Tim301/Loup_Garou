@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Voyante.png-78705f02ff566189ba27f376e33dacae.stex"
+path="res://.import/icon.png-6f2d68d4975bc77b72e9526f4401d28a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images de test/Voyante.png"
-dest_files=[ "res://.import/Voyante.png-78705f02ff566189ba27f376e33dacae.stex" ]
+source_file="res://Bin/Images/icon.png"
+dest_files=[ "res://.import/icon.png-6f2d68d4975bc77b72e9526f4401d28a.stex" ]
 
 [params]
 
