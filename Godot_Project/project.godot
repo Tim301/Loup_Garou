@@ -9,6 +9,11 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Node2D",
+"class": "Chronometer",
+"language": "GDScript",
+"path": "res://Chronometer.gd"
+}, {
 "base": "Node",
 "class": "Horloge",
 "language": "GDScript",
@@ -18,10 +23,17 @@ _global_script_classes=[ {
 "class": "Role",
 "language": "GDScript",
 "path": "res://Bin/Scriptes/role.gd"
+}, {
+"base": "Node2D",
+"class": "Time",
+"language": "GDScript",
+"path": "res://Bin/Scriptes/Time.gd"
 } ]
 _global_script_class_icons={
+"Chronometer": "",
 "Horloge": "",
-"Role": ""
+"Role": "",
+"Time": ""
 }
 
 [application]
@@ -36,6 +48,7 @@ enable_audio_input=true
 
 [display]
 
+window/size/fullscreen=true
 window/stretch/mode="2d"
 window/stretch/aspect="expand"
 
