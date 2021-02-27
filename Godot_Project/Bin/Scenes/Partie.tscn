@@ -58,10 +58,10 @@ process_mode = 0
 autostart = true
 
 [node name="Duree" type="Label" parent="."]
-margin_left = 45.6799
-margin_top = 356.17
-margin_right = 164.68
-margin_bottom = 425.17
+margin_left = 80.2108
+margin_top = 273.596
+margin_right = 199.211
+margin_bottom = 342.596
 text = "03:00"
 align = 1
 valign = 1

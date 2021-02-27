@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Loup_garou.png-8646febe625468852da0480a65dfd962.stex"
+path="res://.import/001.png-8ed90382b6b3b2a28df34cc1d6b5db11.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Bin/Images/Loup_garou.png"
-dest_files=[ "res://.import/Loup_garou.png-8646febe625468852da0480a65dfd962.stex" ]
+source_file="res://Bin/Images/Clock/001.png"
+dest_files=[ "res://.import/001.png-8ed90382b6b3b2a28df34cc1d6b5db11.stex" ]
 
 [params]
 

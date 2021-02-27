@@ -7,6 +7,8 @@ var loupGarou = load("res://Bin/Scriptes/role.gd").new()
 var chrono :Chronometer
 
 func _ready():
+	var Horloge = load("res://Clock.tscn").instance()
+	add_child(Horloge)
 	voyante.edit_illustration("res://Bin/Images/Voyante.png")
 	villageois.edit_illustration("res://Bin/Images/Villageois.png")
 	loupGarou.edit_illustration("res://Bin/Images/Loup_garou.png")

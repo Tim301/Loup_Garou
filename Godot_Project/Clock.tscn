@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Bin/Images/Clock/000.png" type="Texture" id=1]
+[ext_resource path="res://Bin/Images/Clock/002.png" type="Texture" id=2]
+[ext_resource path="res://Bin/Images/Clock/001.png" type="Texture" id=3]
+[ext_resource path="res://Clock.gd" type="Script" id=4]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="Base" type="Sprite" parent="."]
+position = Vector2( 148.991, 441.444 )
+scale = Vector2( 0.181553, 0.181553 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Petit_Eguille" type="Sprite" parent="."]
+position = Vector2( 148.991, 441.444 )
+scale = Vector2( 0.182, 0.182 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Grand_Eguille" type="Sprite" parent="."]
+position = Vector2( 148.991, 441.444 )
+scale = Vector2( 0.182, 0.182 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
