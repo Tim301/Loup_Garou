@@ -1,6 +1,5 @@
 extends Node2D
 
-
 var voyante = load("res://Bin/Scriptes/role.gd").new()
 var villageois = load("res://Bin/Scriptes/role.gd").new()
 var loupGarou = load("res://Bin/Scriptes/role.gd").new()
@@ -14,6 +13,12 @@ func _ready():
 	loupGarou.edit_illustration("res://Bin/Images/Loup_garou.png")
 	chrono = Chronometer.new(60000*3)
 	print("Mon Pseudo est" + Global.Pseudo)
+	
+	var enemynode = get_tree().get_root().find_node("Clock",true,false)
+	#enemynode.connect("finish",self,"itisfinish")
+
+func itisfinish():
+	print("Il va faire noire... TG")
 
 func _process(_delta):
 	chrono.update()

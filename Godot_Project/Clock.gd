@@ -1,4 +1,6 @@
-extends Node2D
+extends Node
+
+signal finish
 
 var rot = 0
 var rot1 = 0
@@ -10,7 +12,9 @@ func _ready():
 	startTime = OS.get_ticks_msec()
 
 func _process(_delta):
-	get_node("Petit_Eguille").rotation_degrees = (float(OS.get_ticks_msec() - startTime)/time) *360
-	get_node("Grand_Eguille").rotation_degrees = (float(OS.get_ticks_msec() - startTime)/time) *360*60
-	
-	
+	var left = OS.get_ticks_msec() - startTime
+	if left <= 0:
+		emit_signal("finish")
+	else:
+		get_node("Petit_Eguille").rotation_degrees = (float(OS.get_ticks_msec() - startTime)/time) *360
+		get_node("Grand_Eguille").rotation_degrees = (float(OS.get_ticks_msec() - startTime)/time) *360*60
