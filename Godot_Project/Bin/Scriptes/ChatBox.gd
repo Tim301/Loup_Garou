@@ -20,7 +20,7 @@ var user_name = Global.Pseudo # Variable qui définie le nom de l'utilisateur
 # Fonction qui initie le chat au channel 0, le channel Global
 func _ready():
 	inputfield.connect("text_entered",self,"text_entered")
-	add_message('Godot','Chat du loup Garoux')
+	add_message('Godot','Souhaitons le bienvenu à ' + Global.Pseudo + '!!!')
 	change_channel(0)
 
 # Fonction qui permet de saisir un texte dans le chat, ou de sortir du chat
@@ -45,12 +45,14 @@ func add_message(username,text,group = 0):
 
 # Fonction qui notifie à l'utilisateur quel channel il a choisit
 func change_channel(value):
-	channel_index += value
-	if channel_index > (channels.size() - 1):
-		channel_index = 0
+	if Global.Is_Alive:
+		channel_index += value
+		if channel_index > (channels.size() - 1):
+			channel_index = 0
+	else:
+		channel_index = 2
 	inputLabel.text = '[' + channels[channel_index]['nom'] + ']'
 	inputLabel.set('custom_colors/font_color', Color(channels[channel_index]['color']))
-
 # Fonction qui permet de ne pas ajouter de message si l'utilisateur n'a pas entré
 # de caractères, ou qui ajoute un message quand il demande de l'aide
 func text_entered(text):
@@ -62,4 +64,3 @@ func text_entered(text):
 		print(text)
 		add_message(user_name,text,channel_index)
 		inputfield.text=''
-	

@@ -1,4 +1,4 @@
 extends Node
 
 var Pseudo = "Tribwyn"
-var Is_Alive = "true"
+var Is_Alive = true
