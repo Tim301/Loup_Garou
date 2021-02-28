@@ -15,7 +15,7 @@ var channels = [
 ]
 
 var channel_index = 0 # Variable qui permetera de changer de channel
-var user_name = "Tabouret" # Variable qui définie le nom de l'utilisateur
+var user_name = Global.Pseudo # Variable qui définie le nom de l'utilisateur
 
 # Fonction qui initie le chat au channel 0, le channel Global
 func _ready():
@@ -38,7 +38,7 @@ func _input(event):
 func add_message(username,text,group = 0):
 	chatlog.bbcode_text += '\n' 
 	chatlog.bbcode_text += '[color=' + channels[group]['color'] + ']'
-	chatlog.bbcode_text += '[' + username + ']:'
+	chatlog.bbcode_text += '[' + username + ']: '
 	chatlog.bbcode_text += text
 	chatlog.bbcode_text += '[/color]'
 

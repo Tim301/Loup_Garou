@@ -2,16 +2,15 @@ extends Node2D
 
 var rot = 0
 var rot1 = 0
+var time = 60000 *3
+var startTime
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	#get_node("Petit_Eguille").rotation_degrees
-	pass
+	startTime = OS.get_ticks_msec()
 
 func _process(_delta):
-	rot += 1
-	rot1 += 6
-	get_node("Petit_Eguille").rotation_degrees = rot
-	get_node("Grand_Eguille").rotation_degrees = rot1
+	get_node("Petit_Eguille").rotation_degrees = (float(OS.get_ticks_msec() - startTime)/time) *360
+	get_node("Grand_Eguille").rotation_degrees = (float(OS.get_ticks_msec() - startTime)/time) *360*60
 	
 	

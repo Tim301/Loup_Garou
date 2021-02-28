@@ -45,17 +45,13 @@ volume_db = -25.0
 autoplay = true
 
 [node name="Liste des joueurs" type="ItemList" parent="."]
-margin_left = 772.0
-margin_top = 7.0
-margin_right = 1017.0
-margin_bottom = 376.0
+margin_left = 769.0
+margin_top = 2.0
+margin_right = 1020.0
+margin_bottom = 381.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="Timer" type="Timer" parent="."]
-process_mode = 0
-autostart = true
 
 [node name="Duree" type="Label" parent="."]
 margin_left = 80.2108
@@ -74,10 +70,8 @@ position = Vector2( 510, 300 )
 current = true
 
 [node name="ChatBox" parent="." instance=ExtResource( 4 )]
-margin_left = 301.245
-margin_top = 5.36741
-margin_right = 768.245
-margin_bottom = 459.367
+margin_left = 301.0
+margin_right = 765.0
+margin_bottom = 459.0
 [connection signal="button_down" from="Bouton" to="." method="_on_Button_button_down"]
 [connection signal="button_up" from="Bouton" to="." method="_on_Button_button_up"]
-[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

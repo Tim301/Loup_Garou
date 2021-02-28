@@ -39,12 +39,16 @@ _global_script_class_icons={
 [application]
 
 config/name="Loupgarou"
-run/main_scene="res://Bin/Scenes/Partie.tscn"
+run/main_scene="res://Bin/Scenes/Lobby.tscn"
 config/icon="res://icon.png"
 
 [audio]
 
 enable_audio_input=true
+
+[autoload]
+
+Global="*res://Bin/Scriptes/Global.gd"
 
 [display]
 

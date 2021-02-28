@@ -12,8 +12,8 @@ func _ready():
 	voyante.edit_illustration("res://Bin/Images/Voyante.png")
 	villageois.edit_illustration("res://Bin/Images/Villageois.png")
 	loupGarou.edit_illustration("res://Bin/Images/Loup_garou.png")
-	chrono = Chronometer.new(60000)
-	#pass
+	chrono = Chronometer.new(60000*3)
+	print("Mon Pseudo est" + Global.Pseudo)
 
 func _process(_delta):
 	chrono.update()
