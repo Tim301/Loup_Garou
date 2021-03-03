@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Bin/Scriptes/Node2D.gd" type="Script" id=1]
 [ext_resource path="res://Bin/Images/Background+maquette.jpg" type="Texture" id=2]
 [ext_resource path="res://Bin/Musiques/Hidden Fear.ogg" type="AudioStream" id=3]
 [ext_resource path="res://Bin/Scenes/ChatBox.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Bin/Scenes/simpleitemlist/ItemList.tscn" type="PackedScene" id=5]
 
 [node name="Partie" type="Node2D"]
 script = ExtResource( 1 )
@@ -44,15 +45,6 @@ stream = ExtResource( 3 )
 volume_db = -25.0
 autoplay = true
 
-[node name="Liste des joueurs" type="ItemList" parent="."]
-margin_left = 769.0
-margin_top = 2.0
-margin_right = 1020.0
-margin_bottom = 381.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="Duree" type="Label" parent="."]
 margin_left = 80.2108
 margin_top = 273.596
@@ -73,5 +65,11 @@ current = true
 margin_left = 301.0
 margin_right = 765.0
 margin_bottom = 459.0
+
+[node name="ItemList" parent="." instance=ExtResource( 5 )]
+margin_left = 798.07
+margin_top = 20.2043
+margin_right = 990.07
+margin_bottom = 340.204
 [connection signal="button_down" from="Bouton" to="." method="_on_Button_button_down"]
 [connection signal="button_up" from="Bouton" to="." method="_on_Button_button_up"]
