@@ -1,7 +1,7 @@
 extends Control
 
 
-var array = ["Scharpnel","Tabouret","Saxoalex","Oxie","Snakex62","Drizzik","Tatate78","Ludwig++",Global.Pseudo]
+var array = Global.List_Joueurs
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
