@@ -4,7 +4,7 @@ signal massage(username,message,group)
 
 var Pseudo = "Tribwyn"
 var Is_Alive = true
-<<<<<<< HEAD
+
 var List_Joueurs = ["Scharpnel","Tabouret","Saxoalex","Oxie","Snakex62","Drizzik","Tatate78","Ludwig++", "Kingsthen", "JeSuisPinPin",Pseudo]
 var role = "chaman"
 #var role = "villagoies"
@@ -17,6 +17,4 @@ func _ready():
 	emit_signal("massage",Global.Pseudo,"Je vote contre Tatate78.",0)
 	yield(get_tree().create_timer(7.0), "timeout")
 	emit_signal("massage",Global.Pseudo,"Ce message est destiné aux morts.",2)
-=======
-var List_Joueurs = ["Scharpnel","Tabouret","Saxoalex","Oxie","Snakex62","Drizzik","Tatate78","Ludwig++", "Kingsthen", "JeSuisPinPin"]
->>>>>>> 70ac5ab6d7985c647b027b9b0cd25bf3c36a1a29
+
