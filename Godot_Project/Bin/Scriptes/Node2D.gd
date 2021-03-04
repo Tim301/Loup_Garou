@@ -12,7 +12,7 @@ func _ready():
 	villageois.edit_illustration("res://Bin/Images/Villageois.png")
 	loupGarou.edit_illustration("res://Bin/Images/Loup_garou.png")
 	chrono = Chronometer.new(60000*3)
-	print("Mon Pseudo est" + Global.Pseudo)
+	print("Mon Pseudo est " + Global.Pseudo)
 	
 	var enemynode = get_tree().get_root().find_node("Clock",true,false)
 	#enemynode.connect("finish",self,"itisfinish")
