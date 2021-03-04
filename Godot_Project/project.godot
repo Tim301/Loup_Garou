@@ -49,6 +49,7 @@ enable_audio_input=true
 [autoload]
 
 Global="*res://Bin/Scriptes/Global.gd"
+Client="*res://Bin/Scriptes/client.gd"
 
 [display]
 

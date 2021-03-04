@@ -22,6 +22,7 @@ func _ready():
 	inputfield.connect("text_entered",self,"text_entered")
 	add_message('Godot','Souhaitons le bienvenu à ' + Global.Pseudo + '!!!')
 	change_channel(0)
+	Global.connect("massage", self, "_on_Timer_timeout")
 
 # Fonction qui permet de saisir un texte dans le chat, ou de sortir du chat
 # ou bien de changer de channel 
@@ -38,7 +39,7 @@ func _input(event):
 func add_message(username,text,group = 0):
 	chatlog.bbcode_text += '\n' 
 	chatlog.bbcode_text += '[color=' + channels[group]['color'] + ']'
-	chatlog.bbcode_text += '[' + username + ']: '
+	chatlog.bbcode_text += ' [' + username + ']: '
 	chatlog.bbcode_text += text
 	chatlog.bbcode_text += '[/color]'
 
@@ -64,3 +65,15 @@ func text_entered(text):
 		print(text)
 		add_message(user_name,text,channel_index)
 		inputfield.text=''
+
+func _on_Timer_timeout(username,message,group):
+	print(username)
+	print(message)
+	print(group)
+	if group == 1 && Global.role == "loupgarou":
+		add_message(username,message,group)
+	if group == 2 && Global.role == "chaman":
+		username = "Esprit"
+		add_message(username,message,group)
+	if group != 1 && group != 2:
+		add_message(username,message,group)

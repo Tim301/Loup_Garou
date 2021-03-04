@@ -12,15 +12,17 @@ margin_right = 427.497
 margin_bottom = 273.296
 text = "Pseudo:"
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
 [node name="Pseudo" type="TextEdit" parent="."]
-margin_left = 441.838
+margin_left = 442.838
 margin_top = 247.297
-margin_right = 662.838
+margin_right = 663.838
 margin_bottom = 267.297
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -31,6 +33,7 @@ margin_right = 602.775
 margin_bottom = 499.027
 text = "Entrer"
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 [connection signal="text_changed" from="Pseudo" to="." method="_on_Pseudo_text_changed"]
