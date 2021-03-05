@@ -15,7 +15,7 @@ func start():
 	get_node("Timer2").start()
 	
 func Hello():
-	print("HelloWorld")
+	print("Hello World")
 
 func set_day_length(minutes):
 	_dayLength = minutes
