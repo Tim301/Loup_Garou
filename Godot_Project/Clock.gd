@@ -17,4 +17,4 @@ func _process(_delta):
 		emit_signal("finish")
 	else:
 		get_node("Petit_Eguille").rotation_degrees = (float(OS.get_ticks_msec() - startTime)/time) *360
-		get_node("Grand_Eguille").rotation_degrees = (float(OS.get_ticks_msec() - startTime)/time) *360*60
+		get_node("Grand_Eguille").rotation_degrees = (float(OS.get_ticks_msec() - startTime)/time) *360*12
