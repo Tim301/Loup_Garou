@@ -36,5 +36,15 @@ __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": false
 }
+
+[node name="OptionButton" type="OptionButton" parent="."]
+margin_left = 473.746
+margin_top = 184.101
+margin_right = 606.746
+margin_bottom = 204.101
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="text_changed" from="Pseudo" to="." method="_on_Pseudo_text_changed"]
 [connection signal="button_down" from="Validate" to="." method="_on_Validate_button_down"]
+[connection signal="item_selected" from="OptionButton" to="." method="_role_selected"]
