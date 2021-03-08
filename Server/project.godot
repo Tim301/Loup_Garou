@@ -1,0 +1,39 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Node",
+"class": "Room",
+"language": "GDScript",
+"path": "res://Room.gd"
+}, {
+"base": "Node",
+"class": "message",
+"language": "GDScript",
+"path": "res://Message.gd"
+} ]
+_global_script_class_icons={
+"Room": "",
+"message": ""
+}
+
+[application]
+
+config/name="WebSocket Minimal Demo"
+run/main_scene="res://Main.tscn"
+
+[autoload]
+
+Server="*res://Server.gd"
+Global="*res://Global.gd"
+
+[rendering]
+
+quality/driver/driver_name="GLES2"

@@ -63,7 +63,10 @@ func text_entered(text):
 		return
 	if text != '':
 		print(text)
-		add_message(user_name,text,channel_index)
+		var Chat = {"Pseudo":user_name,"Text":text,"Channel":channel_index}
+		var msg = { "Type": "Chat", "Room":Global.Room, "Message" : JSON.print(Chat)}
+		Client.sendMessage(JSON.print(msg))
+		#add_message(user_name,text,channel_index)
 		inputfield.text=''
 
 func _on_Timer_timeout(username,message,group):

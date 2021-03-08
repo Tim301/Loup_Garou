@@ -7,6 +7,7 @@ export var websocket_url = "ws://localhost:9080"
 var _client = WebSocketClient.new()
 
 func _ready():
+	print("start")
 	# Connect base signals to get notified of connection open, close, and errors.
 	_client.connect("connection_closed", self, "_closed")
 	_client.connect("connection_error", self, "_closed")
@@ -22,6 +23,9 @@ func _ready():
 		print("Unable to connect")
 		set_process(false)
 
+func sendMessage(message):
+	print(message)
+	_client.get_peer(1).put_packet(message.to_utf8())
 
 func _closed(was_clean = false):
 	# was_clean will tell you if the disconnection was correctly notified
@@ -36,21 +40,21 @@ func _connected(proto = ""):
 	print("Connected with protocol: ", proto)
 	# You MUST always use get_peer(1).put_packet to send data to server,
 	# and not put_packet directly when not using the MultiplayerAPI.
-	_client.get_peer(1).put_packet("yahoooooo".to_utf8())
+	#_client.get_peer(1).put_packet("yahoooooo".to_utf8())
 
 
 func _on_data():
 	# Print the received packet, you MUST always use get_peer(1).get_packet
 	# to receive data from server, and not get_packet directly when not
 	# using the MultiplayerAPI.
-	print("Got data from server: ", _client.get_peer(1).get_packet().get_string_from_utf8())
-
+	var message =  _client.get_peer(1).get_packet().get_string_from_utf8()
+	print("Got data from server: ", message)
+	Global.gotMessage(message)
 
 func _process(_delta):
 	# Call this in _process or _physics_process. Data transfer, and signals
 	# emission will only happen when calling this function.
 	_client.poll()
-
 
 func _exit_tree():
 	_client.disconnect_from_host()

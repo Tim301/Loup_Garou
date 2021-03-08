@@ -38,10 +38,21 @@ __meta__ = {
 }
 
 [node name="OptionButton" type="OptionButton" parent="."]
-margin_left = 473.746
-margin_top = 184.101
-margin_right = 606.746
-margin_bottom = 204.101
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = 481.347
+margin_top = 164.917
+margin_right = 614.347
+margin_bottom = 184.917
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Version" type="Label" parent="."]
+margin_left = 15.1347
+margin_top = 572.124
+margin_right = 65.1347
+margin_bottom = 587.124
 __meta__ = {
 "_edit_use_anchors_": false
 }

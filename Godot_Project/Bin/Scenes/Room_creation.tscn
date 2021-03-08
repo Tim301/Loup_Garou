@@ -1,0 +1,61 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Bin/Scriptes/Create_room.gd" type="Script" id=1]
+
+[node name="Select_Room" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 1.12244
+margin_bottom = 1.12244
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Room_name" type="TextEdit" parent="."]
+margin_left = 523.067
+margin_top = 243.574
+margin_right = 691.067
+margin_bottom = 268.574
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Room_label" type="Label" parent="."]
+margin_left = 378.081
+margin_top = 246.998
+margin_right = 504.081
+margin_bottom = 267.998
+text = "Nom de la chambre:"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 401.102
+margin_top = 74.8775
+margin_right = 688.102
+margin_bottom = 107.878
+text = "Creation d'une chambre de jeu."
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 475.98
+margin_top = 324.857
+margin_right = -437.02
+margin_bottom = -238.143
+text = "Créer"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="text_changed" from="Room_name" to="." method="_on_Room_name_text_changed"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

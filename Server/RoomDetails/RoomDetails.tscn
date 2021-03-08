@@ -1,0 +1,69 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://RoomDetails/RoomDetails.gd" type="Script" id=1]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -0.594604
+margin_right = -0.594604
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+margin_left = 252.727
+margin_top = 130.205
+margin_right = 698.727
+margin_bottom = 469.205
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Room_Name" type="Label" parent="."]
+margin_left = 351.518
+margin_top = 151.19
+margin_right = 591.518
+margin_bottom = 193.19
+text = "Nom de la chambre"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Entrer" type="Button" parent="."]
+margin_left = 391.835
+margin_top = 328.839
+margin_right = 568.835
+margin_bottom = 373.839
+text = "Entrer"
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Password" type="TextEdit" parent="."]
+margin_left = 393.0
+margin_top = 242.0
+margin_right = 569.0
+margin_bottom = 264.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Pwd_Label" type="Label" parent="."]
+margin_left = 324.189
+margin_top = 243.595
+margin_right = 393.189
+margin_bottom = 262.595
+text = "Password:"
+valign = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Entrer" to="." method="_on_Entrer_pressed"]
