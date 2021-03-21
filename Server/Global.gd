@@ -1,7 +1,8 @@
 extends Node
 
-var version = 0.1
+var version = 0.2
 var clients = {}
+var Villagers = {}
 var list_room = []
 var thread = Thread.new()
 var threadRefreshRoom = Thread.new()
@@ -24,6 +25,24 @@ func create_room(room_name,id,joueur):
 func proceedMessage(message, id, joueur):
 	print(message)
 	var msg = JSON.parse(message).result
+	if msg["Type"] == "Check":
+		if msg["Message"] == Global.version:
+			var resp =  { "Type": "Check", "Room":"", "Message" : "Accepted"}
+			Server.sendMessage(JSON.print(resp), id)
+		else:
+			var resp =  { "Type": "Check", "Room":"", "Message" : "Refused"}
+			Server.sendMessage(JSON.print(resp), id)
+	if msg["Type"] == "CreateVillager":
+		var v = JSON.parse(msg["Message"])
+		var status="Refused"
+		for villager in Villagers:
+			if villager.Pseudo == v["Pseudo"]:
+				status="Accepted"
+				Villagers.append(Villager.new(v["Pseudo"],id,v["UniqueID"]))
+				break
+		var resp =  { "Type": "CreateVillager", "Room":"", "Message" : status}
+		Server.sendMessage(JSON.print(resp), id)
+
 	if msg["Type"] == "CreateRoom":
 		var IsRoomNameExist = false
 		for room in list_room:

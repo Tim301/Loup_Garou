@@ -24,7 +24,7 @@ func _physics_process(_delta):
 		modetext += "Maximized\n"
 	if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 		modetext += "MouseGrab\n"
-		$Label_MouseModeCaptured_KeyInfo.show(9*)
+		$Label_MouseModeCaptured_KeyInfo.show()
 	else:
 		$Label_MouseModeCaptured_KeyInfo.hide()
 

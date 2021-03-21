@@ -5,6 +5,7 @@ export var websocket_url = "ws://localhost:9080"
 
 # Our WebSocketClient instance.
 var _client = WebSocketClient.new()
+var is_server_available = false
 
 func _ready():
 	print("start")
@@ -19,10 +20,17 @@ func _ready():
 
 	# Initiate connection to the given URL.
 	var err = _client.connect_to_url(websocket_url)
-	if err != OK:
-		print("Unable to connect")
-		set_process(false)
+	#var err = _client.connect_to_url("123")
 
+	print(err)
+	if err != OK:
+		set_process(false)
+	yield(get_tree().create_timer(0.5), "timeout")
+	sendMessage(JSON.print({"Type": "Check", "Room":"", "Message" : Global.version}))
+	yield(get_tree().create_timer(1.0), "timeout")
+	if is_server_available == false:
+		get_tree().change_scene("res://Bin/Scenes/Error_Server.tscn")
+	
 func sendMessage(message):
 	print(message)
 	_client.get_peer(1).put_packet(message.to_utf8())
@@ -33,7 +41,6 @@ func _closed(was_clean = false):
 	print("Closed, clean: ", was_clean)
 	set_process(false)
 
-
 func _connected(proto = ""):
 	# This is called on connection, "proto" will be the selected WebSocket
 	# sub-protocol (which is optional)
@@ -42,7 +49,6 @@ func _connected(proto = ""):
 	# and not put_packet directly when not using the MultiplayerAPI.
 	#_client.get_peer(1).put_packet("yahoooooo".to_utf8())
 
-
 func _on_data():
 	# Print the received packet, you MUST always use get_peer(1).get_packet
 	# to receive data from server, and not get_packet directly when not
@@ -50,6 +56,7 @@ func _on_data():
 	var message =  _client.get_peer(1).get_packet().get_string_from_utf8()
 	print("Got data from server: ", message)
 	Global.gotMessage(message)
+	is_server_available = true
 
 func _process(_delta):
 	# Call this in _process or _physics_process. Data transfer, and signals

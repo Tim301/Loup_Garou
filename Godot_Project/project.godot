@@ -24,22 +24,34 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Bin/Scriptes/role.gd"
 }, {
+"base": "Node",
+"class": "Room",
+"language": "GDScript",
+"path": "res://Bin/Scriptes/Room.gd"
+}, {
 "base": "Node2D",
 "class": "Time",
 "language": "GDScript",
 "path": "res://Bin/Scriptes/Time.gd"
+}, {
+"base": "Node",
+"class": "Villager",
+"language": "GDScript",
+"path": "res://Bin/Scriptes/Villager.gd"
 } ]
 _global_script_class_icons={
 "Chronometer": "",
 "Horloge": "",
 "Role": "",
-"Time": ""
+"Room": "",
+"Time": "",
+"Villager": ""
 }
 
 [application]
 
 config/name="Loupgarou"
-run/main_scene="res://Bin/Scenes/Room_creation.tscn"
+run/main_scene="res://Bin/Scenes/Intro.tscn"
 config/icon="res://icon.png"
 
 [audio]

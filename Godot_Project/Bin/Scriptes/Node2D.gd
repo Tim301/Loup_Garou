@@ -16,6 +16,7 @@ func _ready():
 	
 	var enemynode = get_tree().get_root().find_node("Clock",true,false)
 	#enemynode.connect("finish",self,"itisfinish")
+	print("song length: " + str(get_node("Musique").stream.get_length()))
 
 func itisfinish():
 	print("Il va faire noire... TG")

@@ -1,8 +1,9 @@
 extends Node
 
 signal massage(username,message,group)
+signal createvillage(status)
 
-var version = 0.1
+var version = 0.2
 var Pseudo = "Tribwyn"
 var Is_Alive = true
 var Room = ""
@@ -22,6 +23,12 @@ func _ready():
 func gotMessage(message):
 	print("gotMessage " + message)
 	var msg = JSON.parse(message).result
+	if msg["Type"] == "CreateVillager":
+		emit_signal("createvillage",msg["Message"])
+	if msg["Type"] == "Check":
+		if msg["Message"] == "Refused":
+			print("Old Version")
+			get_tree().change_scene("res://Bin/Scenes/Error_Version.tscn")
 	if msg["Type"] == "CreateRoom" && get_tree().get_current_scene().name == "Select_Room":
 		if msg["Message"] == "Accepted":
 			Room = msg["Room"]

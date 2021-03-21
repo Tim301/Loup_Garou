@@ -5,7 +5,6 @@ var selected_role = "loupgarou"
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	get_node("Version").text = "Version: " + str(Global.version)
-	print(OS.get_unique_id())
 	role.add_item("loupgarou")
 	role.add_item("chaman")
 	role.add_item("villagoies")

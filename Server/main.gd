@@ -12,7 +12,7 @@ func update_ui():
 	for room in Global.list_room:
 		get_node("OptionButton").add_item(room.Name)
 	get_node("CreatedRoom").text = "Il y a " + str(Global.list_room.size()) + " Room disponible."
-	get_node("OnlinePlayers").text = "Il y a " + str(len(Global.clients)) + " joueurs connectés."
+	get_node("OnlinePlayers").text = "Il y a " + str(len(Global.Villagers)) + " joueurs connectés."
 	get_node("RamUsage").text = str(OS.get_static_memory_usage()/(1024*1024)) + " MB of ram used"
 
 func showRoomDetail(Json):

@@ -9,7 +9,7 @@ var NbPLayer:int
 var MaxPlayer:int
 var IsPlaying = false
 var Private = false
-var Password = "" 
+var Password = ""
 
 func _init(Room_Name,id, joueur):
 	Name = Room_Name

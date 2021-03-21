@@ -1,0 +1,106 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Bin/Scriptes/Intro.gd" type="Script" id=1]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Contract" type="RichTextLabel" parent="."]
+margin_left = 262.584
+margin_top = 129.252
+margin_right = 797.584
+margin_bottom = 408.252
+text = "
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget felis sit amet odio dignissim ultrices. Praesent cursus iaculis diam in dictum. Nam luctus metus sit amet quam rhoncus tristique. Duis consequat auctor eleifend. Pellentesque congue tellus odio, in consequat dolor suscipit id. In convallis nulla interdum libero tincidunt rhoncus. Curabitur volutpat lectus nibh, consectetur hendrerit purus accumsan at. Maecenas tristique et justo sed porttitor. Integer ac consequat est, ut sollicitudin odio. Proin tincidunt est ut magna varius euismod. Sed at dolor blandit lectus porta iaculis nec a metus.
+
+Duis a pulvinar tortor, vel lobortis nisl. Nunc augue mauris, varius in nisl mattis, efficitur efficitur lectus. Etiam at bibendum augue. Nam dapibus ipsum eget semper laoreet. Aliquam erat volutpat. Cras eu tristique lectus, non accumsan est. Nulla at lorem mauris. Nulla sapien massa, luctus ac porttitor eu, bibendum ut metus. In libero lacus, euismod sed ligula nec, rhoncus pharetra tortor. Praesent vulputate maximus lacus, ut malesuada lectus accumsan et. Mauris nec velit massa. Donec ut tincidunt ante. Proin sed libero in nisl vestibulum tincidunt.
+
+Fusce finibus maximus lorem vel maximus. Etiam sem turpis, tincidunt in volutpat eget, venenatis id ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer ornare posuere magna, vel placerat urna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec faucibus nunc vel nibh placerat semper. Nulla pulvinar iaculis turpis, et consectetur dui tincidunt vel. Aliquam ullamcorper orci ac velit bibendum feugiat. Suspendisse id dui sit amet dui luctus bibendum ac in odio. Morbi pretium quam et ex viverra, fermentum feugiat risus feugiat. Vivamus at vestibulum nisi, non maximus sem. Sed tempus ultrices tincidunt. Sed sollicitudin vitae enim ac pretium. Pellentesque eu lectus aliquet, luctus eros quis, fringilla nibh. Proin nec porttitor orci.
+
+Maecenas at efficitur nunc. Nulla blandit quam quis aliquam sagittis. Nam molestie auctor ex sed molestie. Suspendisse sit amet mauris ut justo efficitur dapibus. Pellentesque dapibus ligula ac maximus placerat. Nulla venenatis vehicula nunc, in ornare ex eleifend in. Fusce eleifend facilisis ultrices. Maecenas vitae tincidunt nulla, vel convallis sapien. Cras placerat at tortor suscipit ultricies. Nam gravida tempor purus vitae aliquet. Sed finibus ultrices nisi, dictum cursus tortor aliquam id. Aenean dapibus volutpat magna, vestibulum mollis lorem. Aliquam tristique purus nec tortor vehicula accumsan. Vivamus a congue augue, at consectetur mi. In hac habitasse platea dictumst.
+
+Ut vitae ornare elit. Nulla vulputate egestas sodales. Duis nec congue ipsum, sit amet gravida urna. Fusce sit amet risus vel tortor gravida porttitor. Etiam ultricies porttitor leo, vitae commodo tortor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse nec facilisis tortor, pellentesque ullamcorper erat. "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Version" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Validation" type="HBoxContainer" parent="."]
+margin_left = 261.893
+margin_top = 418.22
+margin_right = 794.893
+margin_bottom = 458.22
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Validation"]
+margin_top = 13.0
+margin_right = 94.0
+margin_bottom = 27.0
+text = "Lu et accepté: "
+
+[node name="CheckBox" type="CheckBox" parent="Validation"]
+margin_left = 98.0
+margin_right = 122.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Validate" type="Button" parent="."]
+margin_left = 455.832
+margin_top = 526.119
+margin_right = 515.832
+margin_bottom = 546.119
+text = "Devenir villagoie"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+margin_left = 402.0
+margin_top = 470.0
+margin_right = 635.0
+margin_bottom = 493.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pseudo_Label" type="Label" parent="HBoxContainer2"]
+margin_right = 116.0
+margin_bottom = 23.0
+size_flags_vertical = 7
+text = "Nom du villagoie: "
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Pseudo" type="TextEdit" parent="HBoxContainer2"]
+margin_left = 120.0
+margin_right = 233.0
+margin_bottom = 23.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+[connection signal="button_down" from="Validate" to="." method="_on_Validate_button_down"]
+[connection signal="text_changed" from="HBoxContainer2/Pseudo" to="." method="_on_Pseudo_text_changed"]

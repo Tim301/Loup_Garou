@@ -13,20 +13,22 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Panel" type="Panel" parent="."]
-margin_left = 252.727
+[node name="Panel" type="WindowDialog" parent="."]
+visible = true
+margin_left = 300.727
 margin_top = 130.205
-margin_right = 698.727
+margin_right = 746.727
 margin_bottom = 469.205
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
-[node name="Room_Name" type="Label" parent="."]
-margin_left = 351.518
-margin_top = 151.19
-margin_right = 591.518
-margin_bottom = 193.19
+[node name="Room_Name" type="Label" parent="Panel"]
+margin_left = 98.791
+margin_top = 20.985
+margin_right = 338.791
+margin_bottom = 62.985
 text = "Nom de la chambre"
 align = 1
 valign = 1
@@ -35,35 +37,46 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Entrer" type="Button" parent="."]
-margin_left = 391.835
-margin_top = 328.839
-margin_right = 568.835
-margin_bottom = 373.839
-text = "Entrer"
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Password" type="TextEdit" parent="."]
-margin_left = 393.0
-margin_top = 242.0
-margin_right = 569.0
-margin_bottom = 264.0
+[node name="Nb_Player" type="Label" parent="Panel"]
+margin_left = 203.125
+margin_top = 59.6902
+margin_right = 243.125
+margin_bottom = 73.6902
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
-[node name="Pwd_Label" type="Label" parent="."]
-margin_left = 324.189
-margin_top = 243.595
-margin_right = 393.189
-margin_bottom = 262.595
+[node name="Password" type="TextEdit" parent="Panel"]
+margin_left = 140.273
+margin_top = 111.795
+margin_right = 316.273
+margin_bottom = 133.795
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Pwd_Label" type="Label" parent="Panel"]
+margin_left = 71.462
+margin_top = 113.39
+margin_right = 140.462
+margin_bottom = 132.39
 text = "Password:"
 valign = 1
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": false
 }
-[connection signal="pressed" from="Entrer" to="." method="_on_Entrer_pressed"]
+
+[node name="Entrer" type="Button" parent="Panel"]
+margin_left = 139.108
+margin_top = 198.634
+margin_right = 316.108
+margin_bottom = 243.634
+text = "Entrer"
+__meta__ = {
+"_edit_lock_": true
+}
+[connection signal="popup_hide" from="Panel" to="." method="_on_Panel_popup_hide"]
+[connection signal="pressed" from="Panel/Entrer" to="." method="_on_Entrer_pressed"]

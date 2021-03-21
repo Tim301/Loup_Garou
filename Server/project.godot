@@ -15,24 +15,34 @@ _global_script_classes=[ {
 "path": "res://Room.gd"
 }, {
 "base": "Node",
+"class": "Villager",
+"language": "GDScript",
+"path": "res://Villager.gd"
+}, {
+"base": "Node",
 "class": "message",
 "language": "GDScript",
 "path": "res://Message.gd"
 } ]
 _global_script_class_icons={
 "Room": "",
+"Villager": "",
 "message": ""
 }
 
 [application]
 
-config/name="WebSocket Minimal Demo"
+config/name="LoupGarou_SRV"
 run/main_scene="res://Main.tscn"
 
 [autoload]
 
 Server="*res://Server.gd"
 Global="*res://Global.gd"
+
+[locale]
+
+locale_filter=[ 0, [  ] ]
 
 [rendering]
 
